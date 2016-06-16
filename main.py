@@ -11,17 +11,17 @@ screen = pygame.display.set_mode((800, 600))
 
 gameObjs = []
 
-background = Background("../images/Nebula1.bmp",
+background = Background("images/Nebula1.bmp",
                         screen.get_width(), screen.get_height())
 
-player = Player("../images/Hunter1.bmp",2, (25, 1, 23, 23))
+player = Player("images/Hunter1.bmp",2, (25, 1, 23, 23))
 playerRotate = pygame.transform.rotate(player.image, 30)
 gameObjs.append(player)
 
 waveManager = WaveManager()
 enemies = []
 for i in range(3):
-    enemy = Enemy("../images/SpacStor.bmp",
+    enemy = Enemy("images/SpacStor.bmp",
                   1,
                   (101, 13, 91, 59),
                   (screen.get_width() + 91, screen.get_height()+ 59),
@@ -33,7 +33,7 @@ for i in range(3):
 
 asteroids = []
 for i in range(3):
-    asteroid = Asteroid("../images/Rock2a.bmp",
+    asteroid = Asteroid("images/Rock2a.bmp",
                         1,
                         (6, 3, 80, 67),
                         (screen.get_width() + 80, screen.get_height() + 67) )
@@ -45,7 +45,7 @@ scoreBoardFrames = []
 numbersWidth = 26
 for i in range(0, 10):
     scoreBoardFrames.append(
-        imageLoader("../images/num.png",
+        imageLoader("images/num.png",
         1,
         (numbersWidth * i, 0, 26,36)
     ))
